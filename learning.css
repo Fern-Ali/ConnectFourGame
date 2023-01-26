@@ -33,11 +33,11 @@ table {
 }
 
 .myTopCells:hover{
-    background-color: darkmagenta;
+    background-color: palevioletred;
     cursor: pointer;
     color: white;
     border-radius: 100px;
-    border: solid 2px white;
+    border: solid 2px orange;
     text-align: center;
     
     
