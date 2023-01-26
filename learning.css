@@ -1,0 +1,64 @@
+﻿body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+}
+
+#board td {
+    width: 100px;
+    height: 100px;
+    
+}
+
+.test td {
+    border: solid 2px #666;
+}
+
+table {
+    position: relative;
+    /*left: 300px;*/
+    margin: auto;
+}
+
+.myTopCells {
+    background-color: black;
+    text-align: center;
+    font-weight: 800;
+    border-radius: 100px;
+    border: solid 5px #666;
+}
+
+.myTopCells:hover{
+    background-color: darkmagenta;
+    cursor: pointer;
+    color: white;
+    border-radius: 100px;
+    border: solid 2px white;
+    text-align: center;
+    
+    
+}
+.player1 {
+    background-color: red;
+    background-image: url("https://img.freepik.com/free-vector/cute-cat-holding-fish-cartoon-icon-illustration-animal-food-icon-concept-isolated-flat-cartoon-style_138676-2171.jpg?w=2000");
+    background-size: cover;
+}
+
+.player2 {
+    background-color: green;
+    background-image: url("https://img.freepik.com/free-vector/cute-cool-cat-wearing-glasses-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated_138676-4268.jpg?w=2000");
+    background-size: cover;
+}
+.piece {
+    border-radius: 100px;
+    border: solid 5px orange;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+  
+    
+}
