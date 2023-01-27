@@ -3,6 +3,25 @@ let board = [];
 let WIDTH = 7;
 let HEIGHT = 6;
 let currentPlayer = 1;
+document.body.style.backgroundImage = "url('https://wallpaperaccess.com/full/5620839.jpg')";
+
+function startGame() {
+
+    let start = document.getElementById("start");
+    let gameBox = document.getElementById("game");
+    /*let gameBoxBorder = document.getElementsByClassName("gameWindow");*/
+    start.classList.add("playing");
+    //gameContainer.classList.remove("hiddenGameWindow");
+    //gameContainer.classList.add("gameWindow");
+    document.body.style.backgroundImage = "url('https://wallpaperaccess.com/full/5620839.jpg')";
+    /*gameContainer.style.display = "block";*/
+    /*gameBox.style.display = "flex";*/
+
+}
+
+let startBtn = document.getElementById("start-button");
+startBtn.addEventListener("click", startGame);
+
 function makeBoard() {
     // TODO: set "board" to empty HEIGHT x WIDTH matrix array
     for (let row = 0; row < HEIGHT; row++) {
@@ -24,7 +43,7 @@ function makeRealBoard() {
         let topCell = document.createElement("td");
         topCell.setAttribute("id", x);
         topCell.classList.add("myTopCells");
-        topCell.innerText = "Drop a Tile";
+        /*topCell.innerText = "Drop a Tile";*/  /*i decided i didnt want any text here.*/
         topofBoard.append(topCell);
 
     }
@@ -55,10 +74,11 @@ function placeTile(y, x) {
     let tile = document.createElement("div");
     tile.classList.add('piece'); /*create this class in cs*/
     tile.classList.add(`player${currentPlayer}`); /*create this player1 + player 2 class in cs*/
-
+    let tileParent = tile.parentElement;
     const takenSpace = document.getElementById(`${y}-${x}`);
 
     takenSpace.append(tile);
+    takenSpace.style.backgroundColor = "rgba(227, 171, 204, 0.39)";
     /*currentPlayer = currentPlayer === 1 ? 2 : 1;*/
 
 }
@@ -66,6 +86,7 @@ function placeTile(y, x) {
 function endGame(msg) {
     alert(msg);
     // TODO: pop up alert message
+    endGameScreen();
 }
 
 function playerClick(evt) {
@@ -126,7 +147,19 @@ function checkForWin() {
 
 }
 
-
+function endGameScreen() {
+    let start = document.getElementById("start");
+    let gameBox = document.getElementById("game");
+    let button = document.getElementById("start-button");
+    let restartButton = document.getElementById("restart-button");
+    /*button.innerText = "Play Again?";*/
+    /*document.body.style.backgroundColor = "black";*/
+    button.style.visibility = "hidden";
+    restartButton.style.visibility = 'visible';
+    start.classList.remove("playing");
+    gameContainer.classList.remove("gameWindow");
+    gameContainer.classList.add("hiddenGameWindow");
+}
 
 
 makeBoard();
