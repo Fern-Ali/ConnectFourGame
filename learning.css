@@ -43,7 +43,7 @@ table {
 
 .myTopCells {
     /*background-color: rgba(185, 168, 174, 45%);*/
-    background-color: rgba(242, 131, 188, 0.8);
+    background-color: rgba(242, 131, 188, 0.4);
     font-weight: 800;
     border-radius: 100px;
     border: solid 5px #666;
@@ -51,7 +51,7 @@ table {
 }
 
     .myTopCells:hover {
-        background-color: rgba(35, 30, 33, 0.79);
+        background-color: rgba(242, 131, 188, 0.75);
         cursor: pointer;
         color: rgba(35, 30, 33, 0.79);
         border-radius: 100px;
