@@ -1,2 +1,2 @@
 # connectFourGame
-ConnectFourGame Cat skin
+ConnectFourGame Retro Cat Skin
